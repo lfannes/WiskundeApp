@@ -13,13 +13,16 @@ if (Meteor.isClient) {
 
   Template.som.events({
     'click button': function () {
-      var randomTerm1 = Math.random() *11;
-      var AfrondenTerm1 = Math.floor(randomTerm1);
-      Session.set('term1', AfrondenTerm1);
+      function maakRandomGetalTussen0En(max)
+      {
+        var randomGetal = Math.random()*(max+1);
+        var afgerondGetal = Math.floor(randomGetal);
+        return afgerondGetal;
+      }
 
-      var randomTerm2 = Math.random() *101;
-      var AfrondenTerm2 = Math.floor(randomTerm2);
-      Session.set('term2', AfrondenTerm2);
+      Session.set('term1', maakRandomGetalTussen0En(10));
+
+      Session.set('term2', maakRandomGetalTussen0En(10));
     },
   });
 }
