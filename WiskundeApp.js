@@ -1,6 +1,13 @@
+function maakRandomGetalTussen0En(max)
+{
+  var randomGetal = Math.random()*(max+1);
+  var afgerondGetal = Math.floor(randomGetal);
+  return afgerondGetal;
+}
+
 if (Meteor.isClient) {
-  Session.setDefault('term1', 1);
-  Session.setDefault('term2', 0);
+  Session.setDefault('term1', maakRandomGetalTussen0En(10));
+  Session.setDefault('term2', maakRandomGetalTussen0En(10));
 
   Template.som.helpers({
     term1: function () {
@@ -13,15 +20,7 @@ if (Meteor.isClient) {
 
   Template.som.events({
     'click button': function () {
-      function maakRandomGetalTussen0En(max)
-      {
-        var randomGetal = Math.random()*(max+1);
-        var afgerondGetal = Math.floor(randomGetal);
-        return afgerondGetal;
-      }
-
       Session.set('term1', maakRandomGetalTussen0En(10));
-
       Session.set('term2', maakRandomGetalTussen0En(10));
     },
   });
