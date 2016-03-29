@@ -19,10 +19,21 @@ if (Meteor.isClient) {
   });
 
   Template.som.events({
-    'click button': function () {
+    'submit .antwoord-formulier': function (event) {
+      var juistAntwoord = Session.get('term1')+ Session.get('term2');
+      var userAntwoord = Number(event.target.antwoord.value);
+      if (userAntwoord == juistAntwoord)
+      {
+        alert('Je hebt het goed gedaan!!!');
+      }
+      else
+      {
+        alert('Sorry, je hebt het mis. Het was ' +juistAntwoord);
+      }
+
       Session.set('term1', maakRandomGetalTussen0En(10));
       Session.set('term2', maakRandomGetalTussen0En(10));
-    },
+     },
   });
 }
 
