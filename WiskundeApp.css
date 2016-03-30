@@ -1,1 +1,13 @@
 /* CSS declarations go here */
+.everything
+{
+	left: 0%;
+	background-color: lightgray;
+}
+.button-color
+{
+	top: 10%;
+	background-color: blue;
+	left: 0%;
+}
+

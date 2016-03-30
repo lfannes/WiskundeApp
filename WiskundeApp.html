@@ -2,16 +2,16 @@
   <title>Wiskunde app</title>
 </head>
 
-<body>
+<body class="everything">
   <h1>Wiskunde app</h1>
 
   {{> som}}
 </body>
 
-<template name="som">
+<template name="som" class="somColor">
 	<p>{{term1}} + {{term2}} = </p>
 	<form class="antwoord-formulier">
-	<input type="text" name="antwoord">
-	<input type="submit" value="Controleer">
+	<input type="text" name="antwoord" class="balk-color">
+	<input type="submit" value="Controleer" class="button-color">
 	</form>
 </template>
