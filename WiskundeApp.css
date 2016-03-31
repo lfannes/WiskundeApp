@@ -11,3 +11,17 @@
 	left: 0%;
 }
 
+.title
+{
+
+  font-family: cursive;
+  left: 0%;
+}
+.head-title
+{
+  background-color: lightgray;
+}
+.body
+{
+  background-color: lightgray;
+}
